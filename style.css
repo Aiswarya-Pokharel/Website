@@ -11,6 +11,7 @@
   list-style: none;
   text-decoration: none;
   color: #fff;
+  max-width: 100vw;
 }
 
 body {
@@ -23,25 +24,24 @@ header {
   z-index: 100;
   top: 0;
   justify-content: space-between;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   position: fixed;
   box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
-  width: 100%;
+  width: 100vw;
   padding: 7px 5px;
   height: 8vh;
 }
-
-ul {
+nav ul {
   display: flex;
   padding-right: 5rem;
   gap: 2rem;
   font-size: 1.1rem;
-  background-color: transparent;
+  background: transparent;
   overflow: hidden;
   margin-right: 8vw;
 }
 
-ul li a,
+nav ul li a,
 .active {
   display: flex;
   font-weight: 600;
@@ -101,7 +101,7 @@ ul li a.active {
 }
 
 .img-w {
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -428,6 +428,7 @@ footer p {
 @media (max-width: 480px) {
   .front {
     background: linear-gradient(160deg, #33383C 40%, #fff 30%);
+    min-height: 50vh;
   }
 
   header {
@@ -440,31 +441,44 @@ footer p {
 
   .logo h1 {
     font-size: 1.2rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     letter-spacing: -3px;
+  }
+
+  #navbar {
+    float: right;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    position: fixed;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vh;
+    right: -50vw;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: #33383C;
   }
 
   #cross {
     display: block;
+    font-size: 2.5rem;
     cursor: pointer;
-  }
-
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 31vh;
-    width: 100%;
-    background-color: #33383C;
-    padding: 7rem 0 0 2rem;
+    margin-left: 1.5rem;
   }
 
   .bar {
     display: block;
     font-size: 2.2rem;
-    margin-right: 1rem;
+    margin-right: 1rem; 
+    margin-top: 0.5rem;
     cursor: pointer;
-
+  }
+  #navbar.active {
+    right: 0;
+  }
+nav ul li {
+    padding: 15px;
   }
 
   .image {
@@ -507,39 +521,55 @@ footer p {
   header {
     height: 6.5vh;
   }
-
+ .about{
+  margin-top: 11rem;
+ }
   .logo h1 {
     font-size: 2.2rem;
     margin-left: 1rem;
 
   }
+  #navbar {
+    float: right;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 1.8rem;
+    position: fixed;
+    flex-direction: column;
+    width: 25vw;
+    height: 35vh;
+    top: 0;
+    right: -100vw;
+    transition: all 0.3s ease-in-out;
+    background-color: #33383C;
+  }
+
+  #cross {
+    display: block;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+  }
+
+  .bar {
+    display: block;
+    font-size: 3.5rem;
+    margin-right: 1rem; 
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  #navbar.active {
+    right: 0;
+  }
+nav ul li {
+    padding: 15px;
+  }
+
 
   .img-w {
     width: 130%;
   }
 
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 31vh;
-    width: 100%;
-    background-color: #33383C;
-    padding: 7rem 0 0 2rem;
-  }
-
-  .bar {
-    display: block;
-    cursor: pointer;
-    font-size: 5rem;
-    padding-right: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  #cross {
-    display: block;
-    cursor: pointer;
-  }
 
   .main .detail h1 {
     font-size: 5rem;
@@ -585,52 +615,74 @@ footer p {
   .container {
     padding: 0 22vw;
   }
-  .main{
+
+  .main {
     padding: 15vh 0;
   }
+
   .front {
     background: linear-gradient(155.5deg, #33383C 45%, #fff 30%);
+    margin-bottom: 18rem;
   }
   header {
     height: 7vh;
   }
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 31vh;
-    width: 100%;
-    background-color: #33383C;
-    padding: 7rem 0 0 2rem;
-  }
 
-  .bar {
-    display: block;
-    cursor: pointer;
-    font-size: 5rem;
-    padding-right: 1.5rem;
-    margin-top: 1rem;
+  #navbar {
+    float: right;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 1.8rem;
+    position: fixed;
+    flex-direction: column;
+    width: 25vw;
+    height: 35vh;
+    top: 0;
+    right: -100vw;
+    transition: all 0.3s ease-in-out;
+    background-color: #33383C;
   }
 
   #cross {
     display: block;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+  }
+
+  .bar {
+    display: block;
+    font-size: 4rem;
+    margin-right: 1rem; 
+    margin-top: 0.5rem;
     cursor: pointer;
   }
-  .logo h1{
+  #navbar.active {
+    right: 0;
+  }
+nav ul li {
+    padding: 15px;
+  }
+
+  .logo h1 {
     font-size: 2.5rem;
   }
+
   .main .detail h3 {
     font-size: 4.5rem;
     margin-top: 3rem;
     color: var(--primary-color);
   }
+
   .main .detail h1 {
     font-size: 5rem;
   }
+
   .socials {
     gap: 3.5rem;
     margin-top: 2.6rem;
   }
+
   footer p {
     font-size: 1.6rem;
   }
