@@ -31,14 +31,15 @@ header {
   padding: 7px 5px;
   height: 8vh;
 }
+
 nav ul {
   display: flex;
   padding-right: 5rem;
-  gap: 2rem;
-  font-size: 1.1rem;
+  gap: 2.5rem;
+  font-size: 1.4rem;
   background: transparent;
   overflow: hidden;
-  margin-right: 8vw;
+  margin-right: 6vw;
 }
 
 nav ul li a,
@@ -131,9 +132,9 @@ ul li a.active {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-left: 2.5rem;
 }
 
 .socials a {
@@ -428,7 +429,6 @@ footer p {
 @media (max-width: 480px) {
   .front {
     background: linear-gradient(160deg, #33383C 40%, #fff 30%);
-    min-height: 50vh;
   }
 
   header {
@@ -470,14 +470,16 @@ footer p {
   .bar {
     display: block;
     font-size: 2.2rem;
-    margin-right: 1rem; 
+    margin-right: 1rem;
     margin-top: 0.5rem;
     cursor: pointer;
   }
+
   #navbar.active {
     right: 0;
   }
-nav ul li {
+
+  nav ul li {
     padding: 15px;
   }
 
@@ -521,14 +523,17 @@ nav ul li {
   header {
     height: 6.5vh;
   }
- .about{
-  margin-top: 11rem;
- }
+
+  .about {
+    margin-top: 11rem;
+  }
+
   .logo h1 {
     font-size: 2.2rem;
     margin-left: 1rem;
 
   }
+
   #navbar {
     float: right;
     align-items: flex-end;
@@ -554,14 +559,16 @@ nav ul li {
   .bar {
     display: block;
     font-size: 3.5rem;
-    margin-right: 1rem; 
+    margin-right: 1rem;
     margin-top: 0.5rem;
     cursor: pointer;
   }
+
   #navbar.active {
     right: 0;
   }
-nav ul li {
+
+  nav ul li {
     padding: 15px;
   }
 
@@ -624,6 +631,7 @@ nav ul li {
     background: linear-gradient(155.5deg, #33383C 45%, #fff 30%);
     margin-bottom: 18rem;
   }
+
   header {
     height: 7vh;
   }
@@ -653,14 +661,16 @@ nav ul li {
   .bar {
     display: block;
     font-size: 4rem;
-    margin-right: 1rem; 
+    margin-right: 1rem;
     margin-top: 0.5rem;
     cursor: pointer;
   }
+
   #navbar.active {
     right: 0;
   }
-nav ul li {
+
+  nav ul li {
     padding: 15px;
   }
 
@@ -678,7 +688,7 @@ nav ul li {
     font-size: 5rem;
   }
 
-  .socials {
+  .socials {  
     gap: 3.5rem;
     margin-top: 2.6rem;
   }
